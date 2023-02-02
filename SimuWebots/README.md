@@ -36,7 +36,7 @@ Dans un premier temps, il est **impératif** de lancer un ROS Master. Sans celui
   
 Depuis la fenêtre principale de WeBots, aller dans File puis Open World  et sélectionner, dans le dossier précédemment décompréssé, le fichier simu_vx.wbt (dossier worlds de l'archive décompressée).  La simulation devrait s'ouvrir er ressembler à l'image ci-dessous. Un second environnement avec un circuit plus complexe est également disponible.   
 
-<img src="https://github.com/Intelligent-Systems-MSc/cva-su/blob/main/SimuWebots/SIMU.png" width="300">  
+<img src="https://github.com/Intelligent-Systems-MSc/cva-su/blob/main/SimuWebots/SIMU.png" width="600">  
   
 Pour lancer la simulation, il faut alors cliquer sur le bouton  play en haut de la fenêtre de visualisation graphique (Pour vérifier si le simulateur est bien en route, un indicateur temporel est situé à gauche du bouton play. Si cet indicateur affiche un chronomètre, alors la simulation est bien en cours de fonctionnement.). Si besoin, la simulation peut être arrétée et relancée avec les boutons pause et restart, voisins au bouton play. 
 

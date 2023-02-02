@@ -53,4 +53,6 @@ Le robot souscrit à deux topics qui lui permettent de lire des valeurs de comma
 
 - **/AngleCommand**  : Ce topic attend des valeurs en Float32 comprises entre -1 et 1. Il permet de régler la direction de circulation du véhicule (1 : aller complètement à droite, -1 à gauche, 0 au centre).  
   
-Des exemples d'utilisation de ces topics sont disponibles dans le package ROS d'exemple (SIMU_webots) : par exemple, le fichier teleop_robot.py permet de télé-opérer le véhicule grâce aux flèches du clavier (+ une petite interface graphique). 
+Des exemples d'utilisation de ces topics sont disponibles dans le package ROS d'exemple (SIMU_webots) : par exemple, le fichier teleop_robot.py permet de télé-opérer le véhicule grâce aux flèches du clavier (+ une petite interface graphique).   
+  
+Pour toute question ou remarque concernant ce simulateur, ne pas hésiter à me contacter (par exemple avec une *issue*  GitHub afin que tout le monde puisse profiter de ces remarques !). 

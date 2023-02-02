@@ -1,7 +1,7 @@
 # Installation et Utilisation du simulateur :
 **Note importante 1 :** Ce simulateur a été intégralement développé sous Linux, et n'a pas été testé sous Windows ou MacOS. Il est possible d'installer WeBots sous ces deux OS, mais l'utilisation de ROS dans ces environnements est moins naturelle que sous Linux. N'ayant pas accès à une machine équipée de Windows ou MacOS, je ne peux pas fournir d'instructions d'installation du simulateur pour ces deux OS.   
   
-**Note importante 2 :** L'utilisation de ce simulateur requiert de maîtriser les concepts de base de ROS (lecture et publication efficace dans des topics ROS, utilsation du rosmaster et de roslaunch, rosbag, rosmsg, timers ...). Ce document est rédigé en supposant que le lecteur maîtrise ces points théoriques. Si ce n'est pas le cas, se référrer à la documentation de ROS et aux exemples proposés dans le Google Drive du projet.  
+**Note importante 2 :** L'utilisation de ce simulateur requiert de maîtriser les concepts de base de ROS (lecture et publication efficace dans des topics ROS, utilsation du rosmaster et de roslaunch, rosbag, rosmsg, timers ...). Ce document est rédigé en supposant que le lecteur maîtrise ces points théoriques. Si ce n'est pas le cas, se référer à la documentation de ROS et aux exemples proposés dans le Google Drive du projet.  
 
 ## I - Installation - SANS Docker : 
 #### Pré-requis : 

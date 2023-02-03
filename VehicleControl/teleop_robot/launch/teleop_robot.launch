@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	<param name="max_speed" value="0.7" />
+	<param name="max_angle" value="0.8" />
+	<param name="topic_keyboard" value="/KeyboardPub"/>
+
+	<!-- Run nodes -->
+	<node pkg="teleop_robot" name="teleop_robot" type="teleop_robot.py"/>
+
+</launch>
+

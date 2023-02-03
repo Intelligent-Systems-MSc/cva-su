@@ -34,14 +34,14 @@ $>>$**scp pi@192.168.50.5:/Chemin/Vers/Fichier.txt /Chemin/Dans/PC/Fichier.txt**
   
 Pour transferer un dossier entier, il suffit d'ajouter l'option "-r" juste aorès le mot clef "scp" 
 
-### Simulateur : 
+## Simulateur : 
 Nous avons mis en place en environnement de simulation sous WeBots ([simu-webots](https://github.com/Intelligent-Systems-MSc/cva-su/tree/main/SimuWebots)). Ce simulateur permet de tester des algorithmes de navigation dans un environnement ROS similaire à celui du robot réel (mêmes capteurs avec leurs limitations et bruits, mêmes topics ROS, mêmes fréquences de publication des données ...). 
 
-### Docker : 
+## Docker : 
 Des images docker ont été créées afin de lancer WeBots ainsi que ROS sur n'importe quelle machine. Pour le moment, ces fichiers sont disponibles sur le dépot suivant: [ros-webots-docker](https://github.com/Teiwin/ros-webots-docker)
 
-### Commande en tension : 
+## Commande en tension : 
 Une carte électronique de commande en tension des actionneurs du véhicule a été réalisée et est documentée ici :[control-vehicle](https://github.com/Intelligent-Systems-MSc/cva-su/tree/main/VehicleControl). Une carte Arduino est utilisée pour contrôler les actionneurs et son code est également disponible dans ce dépôt. 
 
-### Capteurs : 
+## Capteurs : 
 Le robot est équipé de différents capteurs. Ces capteurs publient leurs données dans l'environnement ROS du robot, et sont documentés ici : [sensors](https://github.com/Intelligent-Systems-MSc/cva-su/tree/main/Sensors)

@@ -6,8 +6,8 @@ Téléchargez ce package ROS et placez le dans votre workspace ROS (dans le sous
 pour prendre en main son fonctionnement).
 
 ## Installation du véhicule : 
-Pour télé-opérer le robot, aucun capteur ne sera nécéssaire. Les branchements suivants doivent être effectués : 
-<img src="https://github.com/Intelligent-Systems-MSc/cva-su/blob/main/VehicleControl/teleop_robot/teleop.png" width="300">  
+Pour télé-opérer le robot, aucun capteur ne sera nécéssaire. Les branchements suivants doivent être effectués :   
+<img src="https://github.com/Intelligent-Systems-MSc/cva-su/blob/main/VehicleControl/teleop_robot/teleop.png" width="600">  
   
 Une fois que tous ces branchements sont effectués, mettez le raspberry pi sous tension (en branchant la prise d'alimentation du Pi à la batterie portable – il faut attendre environ 30s que le système d'exploitation démarre).  ATTENTION : Pour le moment, ne branchez pas la batterie 7.2V du moteur (la LED d'alimentation doit être éteinte). 
 

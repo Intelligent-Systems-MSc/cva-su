@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+	<!-- Run nodes -->
+	<node pkg="main_subscriber" name="camera_plot" type="camera_plot.py"/>
+	<node pkg="main_subscriber" name="tofs_plot" type="tofs_plot.py"/>
+	<node pkg="main_subscriber" name="lidar_plot" type="lidar_plot.py"/>
+
+</launch>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	
+        <!-- Paramètres noeud navigation -->
+        <param name="servo_zero" value="0" />
+        <param name="servo_left" value="1" />
+	<param name="servo_right" value="-1" />
+	<param name="left_limite" value="1" />
+	<param name="right_limite" value="-1" />
+	<param name="esc_vmax" value="0.7" />
+	<param name="esc_vmin" value="0.5" />
+	<param name="seuil_distance" value="2.0" />
+	<param name="seuil_obstacle" value="0.2" />
+	<param name="seuil_voisin" value="1" />
+	<param name="frequence_nav" value="3" />
+	<param name="topic_data" value="/ScannerData"/>
+		
+	<!-- Paramètres noeuds calcul des distances -->
+	<param name="nb_angles" value="32" />
+	<param name="lim_angle" value="80" />
+	<param name="wide" value="6" />
+	<param name="dist_max" value="10.0" />
+	<param name="dist_min" value="0.15" />
+	<param name="topic_scan" value="/scan"/>
+	
+	<!-- Paramètres pour la liaison de communication sécurité -->
+	<param name="stop_value" value="0"/>
+       
+       	<node pkg="lidar_navigation" name="nav_distance" type="nav_distance.py" />
+       	<node pkg="lidar_navigation" name="nav_lidar" type="nav_lidar.py"/>
+
+			
+</launch>

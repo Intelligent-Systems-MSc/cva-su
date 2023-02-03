@@ -1,7 +1,7 @@
 // PFE - Course de vehicules autonomes
 // Author : Tom DA SILVA-FARIA
 
-#include <Servo.h>
+#include <VarSpeedServo.h>
 #include <ros.h>
 #include <std_msgs/Float32.h>
 #include <std_msgs/Bool.h>
@@ -16,10 +16,10 @@ int pin_PWM = 3   ; int pin_SRV = 10 ;
 int pin_REL = 8   ; int current_REL = HIGH ;
 int max_PWM = 255 ; 
 
-Servo servo ; 
+VarSpeedServo servo ; int speedServo = 50 ; 
 float angle_message = 0 ; float angle_scaled = 0 ; 
 float min_msg = -1.0 ; float max_msg = 1.0  ; 
-float min_ang = 68.0 ; float max_ang = 39.0 ; float zero_ang = 51.0 ;  // Right max : 65 -- Left max : 35 
+float min_ang = 65.0 ; float max_ang = 35.0 ; float zero_ang = 51.0 ;  // Right max : 65 -- Left max : 35 
 
 void speedCb( const std_msgs::Float32& speed_msg){
   speed_command = speed_msg.data ; 
@@ -53,7 +53,7 @@ void angleCb(const std_msgs::Float32& angle_msg){
   else if(angle_message < -1){angle_message = -1 ;} 
   if(angle_message == 0){angle_scaled = zero_ang ;}
   else{angle_scaled = ((angle_message - min_msg)/(max_msg - min_msg)) * (max_ang - min_ang) + min_ang ;}
-  servo.write(int(angle_scaled)) ;
+  servo.write(int(angle_scaled), speedServo) ;
   /*
   char result[2]; 
   dtostrf(int(angle_scaled), 6, 2, result); 

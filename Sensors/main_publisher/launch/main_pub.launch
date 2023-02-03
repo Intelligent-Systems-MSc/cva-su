@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+	<include file="$(find main_publisher)/launch/rplidar.launch" />
+	<!-->	
+	<param name="image_width" value="160" />
+	<param name="image_height" value="128"/>
+	<param name="frame_rate" value="32"   /><-->
+	<arg name="node_start_delay" default="10.0" />	
+	<!-->
+	<node pkg="main_publisher" name="camera_pub" type="camera_pub.py"
+		output="screen" required="true">
+	</node>
+	
+	<node pkg="main_publisher" name="tofs_pub" type="tofs_pub.py"
+		output="screen" required="true">
+	</node>
+	<-->
+	<node pkg="main_publisher" name="stop_pub" type="stop_pub.py"
+		output="screen" required="true" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@'">
+	</node>
+</launch>

@@ -1,7 +1,9 @@
 # Course de Voiture autonome - Sorbonne Université
 
-Ce dépot à pour but de partager les avancées du groupe de sorbonne université sur la course de voiure autonome. Le modèle 3D du robot, les vidéos et les documentations sont disponibles dans ce Google Drive : https://drive.google.com/drive/folders/1IN_bX1qWm7_AuP1AxILJaJX2wpmhlquH?usp=sharing
-
+Ce dépot à pour but de partager les avancées du groupe de sorbonne université sur la course de voiure autonome. Le modèle 3D du robot, les vidéos et les documentations sont disponibles dans ce Google Drive : https://drive.google.com/drive/folders/1IN_bX1qWm7_AuP1AxILJaJX2wpmhlquH?usp=sharing  
+  
+<img src="https://github.com/Intelligent-Systems-MSc/cva-su/blob/main/vehicle.png" width="600">  
+  
 
 ## Contexte
 Le but de ce projet est de réaliser un robot autonome compétitif à partir d'un châssis de voiture 

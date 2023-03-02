@@ -163,9 +163,10 @@ include_directories(
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 catkin_install_python(PROGRAMS
-  src/nav_distance.py
-  src/nav_lidar.py
-  src/quit.py
+  src/plot_camera.py
+  src/plot_lidar.py
+  src/plot_sensors.py
+  src/teleop_robot.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

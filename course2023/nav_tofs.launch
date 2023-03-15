@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	<param name="max_speed" value="1.0" />
+	<param name="min_speed" value="0.4" />
+	<param name="max_angle" value="1.0" />
+	<param name="tofs_default_max_dist"  value="10.0" />
+	<param name="min_dist"  value="0.4" />
+
+	<!-- Run nodes -->
+	<node pkg="SIMU_webots" type="pub_tofs2dist.py" name="pub_tofs2dist"/>
+	<node pkg="SIMU_webots" type="nav_tofs.py" name="nav_tofs" output="screen"/>
+	<node pkg="SIMU_webots" type="nav_haut_niveau.py" name="nav_haut_niveau"/>
+    <!--<node pkg="SIMU_webots" type="plot_sensors.py" name="plot_sensors"/>-->
+
+</launch>

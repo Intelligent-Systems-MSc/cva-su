@@ -116,7 +116,7 @@ class Navigation() :
 
                 # calculate the new speed and angle
                 new_speed = (self.MAX_SPEED - self.MIN_SPEED)*norma_dist + self.MIN_SPEED
-                new_angle = (atan2(lateral_dist_to_obstacle, dist) / pi) * self.MAX_ANGLE
+                new_angle = atan2(lateral_dist_to_obstacle, dist) * self.MAX_ANGLE
 
                 # angle limitation
                 if new_angle > self.MAX_ANGLE :

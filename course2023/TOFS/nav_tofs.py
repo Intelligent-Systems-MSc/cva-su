@@ -12,7 +12,7 @@ from std_msgs.msg import Float32MultiArray, Float32, String
 
 class Navigation() : 
 
-    def __init__(self, MAX_SPEED=1.0, MAX_ANGLE=1.0, MAX_DIST=10.0, MIN_DIST=0.4, MIN_SPEED=0.2) : 
+    def __init__(self, MAX_SPEED=1.0, MAX_ANGLE=1.0, MIN_ANGLE=0.2, MAX_DIST=10.0, MIN_DIST=0.4, MIN_SPEED=0.2) : 
         # variables
         self.speed = 0
         self.angle = 0
@@ -21,6 +21,7 @@ class Navigation() :
         # constants
         self.MAX_SPEED = MAX_SPEED # default max speed of the car
         self.MAX_ANGLE = MAX_ANGLE # default max angle of the car
+        self.MIN_ANGLE = MIN_ANGLE # minimum angle when turning
         self.MAX_DIST  = MAX_DIST  # default max distance of the tofs
         self.MIN_DIST  = MIN_DIST  # minimum distance = too close
         self.MIN_SPEED = MIN_SPEED # minimum speed = too slow
@@ -115,8 +116,8 @@ class Navigation() :
                 mess = "Obstacle detected, navigating around it"
 
                 # calculate the new speed and angle
-                new_speed = (self.MAX_SPEED - self.MIN_SPEED)*norma_dist + self.MIN_SPEED
-                new_angle = atan2(lateral_dist_to_obstacle, dist) * self.MAX_ANGLE
+                new_speed = (self.MAX_SPEED - self.MIN_SPEED) * norma_dist + self.MIN_SPEED
+                new_angle = (self.MAX_ANGLE - self.MIN_ANGLE) * (atan2(lateral_dist_to_obstacle, dist)) + self.MIN_ANGLE
 
                 # angle limitation
                 if new_angle > self.MAX_ANGLE :
@@ -164,9 +165,10 @@ if __name__ == "__main__" :
         max_ds = rospy.get_param("tofs_default_max_dist",  default=10.0)
         min_ds = rospy.get_param("min_dist",  default=0.4)
         max_ag = rospy.get_param("max_angle", default=1.0)
+        min_ag = rospy.get_param("min_angle", default=0.2)
 
-    
-        nav = Navigation(MAX_SPEED=max_sp, MAX_ANGLE=max_ag, MAX_DIST=max_ds, MIN_DIST=min_ds, MIN_SPEED=min_sp)
+        
+        nav = Navigation(MAX_SPEED=max_sp, MAX_ANGLE=max_ag, MIN_ANGLE=min_ag, MAX_DIST=max_ds, MIN_DIST=min_ds, MIN_SPEED=min_sp)
         nav.run()
 
         rospy.spin()

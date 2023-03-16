@@ -4,13 +4,14 @@
 import rospy
 import numpy as np
 
-from std_msgs.msg import Float32
+from std_msgs.msg import Float32, Float32MultiArray
 import message_filters 
 
 class Controller:
     def __init__(self):
         self.speed=Float32()
         self.ang=Float32()
+        self.command=Float32MultiArray()
 
 def angle_regulator_callback(msg_dir,msg_center,c):
     d_center=msg_center.data #centering err : left-right -> d_c>0 : go left, d_c<0 : go right
@@ -67,14 +68,20 @@ if __name__=='__main__':
         rate=rospy.Rate(10)
 
         #publish on angular and speed command topic
+        """ 
         angle_pub=rospy.Publisher("/AngleCommand",Float32,queue_size=1)
-        speed_pub=rospy.Publisher("/SpeedCommand",Float32,queue_size=1)
+        speed_pub=rospy.Publisher("/SpeedCommand",Float32,queue_size=1) """
+
+        command_pub=rospy.Publisher("/SpeedAngleCommand",Float32MultiArray,queue_size=1)
 
 
         while not rospy.is_shutdown():
-
+            """ 
             angle_pub.publish(c.ang)
-            speed_pub.publish(c.speed)
+            speed_pub.publish(c.speed) """
+            c.command.data=[c.speed, c.ang]
+
+            command_pub.publish(c.command)
 
             rate.sleep()
 

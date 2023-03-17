@@ -17,6 +17,10 @@
     
 </node>
 
+
+<param name="MAX_SPEED" value="1"/>
+<param name="MAX_ANGLE" value="1"/>
+
 <param name="lidar_nav_only" value="False"/>
 
 <param name="kc" value="-1"/>
